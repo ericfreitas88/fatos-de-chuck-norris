@@ -1,7 +1,77 @@
+/* Define variáveis para as cores usadas na página */
 :root {
+  --bg-color: #1a1a1a;  /* cor de fundo da página */
+  --text-color: #f2f2f2;  /* cor do texto */
+  --link-color: #dbdbdb;  /* cor dos links */
+  --accent-color: #ff5555;  /* cor de destaque */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* Aplica o esquema de cores à página */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Define o estilo para o cabeçalho */
+header {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+header q {
+  display: block;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+header span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Define o estilo para o conteúdo principal */
+.container-fatos {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.chuck-fato {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.novo_fato {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Define o estilo para o rodapé */
+footer {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
