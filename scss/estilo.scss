@@ -1,8 +1,98 @@
-$cor_de_fundo: #000;
-$cor_do_texto: #fff;
+@import "cores-base.scss";
 
-:root {
+@mixin flex-Center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@font-face {
+    font-family: "Old Newspaper";
+    src: url("/fontes/Mom«t___.ttf");
+}
+@font-face {
+    font-family: "1942";
+    src: url("/fontes/1942.ttf");
+}
+@font-face {
+    font-family: "Type Machine";
+    src: url("/fontes/Type_Machine.ttf");
+}
+
+/* Estilos Gerais */
+*,:root {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $bg_color_3;
+    color: $cor_primaria_b;
+}
+
+/* Estilos do topo */
+.topo {
+    @include flex-Center();
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto 80px;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    background-color: $bg_color_1;
+}
+.topo q {
+    font-family: "Old Newspaper";;
+    font-size: $fonte_media_1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: $fonte_pequena_1;
+    line-height: $fonte_media_3;
+}
+.topo span {
+    font-family: "1942";
+    font-size: $fonte_media_1;
+    align-self: flex-end;
+}
+.img-topo {
+    border-radius: 50%;
+    width: 65px;
+    position: absolute;
+    right: -20px;
+    top: -10px;
+}
+
+/* Estilos do conteudo */
+.container-fatos {
+    @include flex-Center();
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.chuck-fato {
+    font-family: "Type Machine";
+    font-size: $fonte_media_3;
+    text-align: center;
+}
+.novo_fato {
+    @include flex-Center();
+    font-family: "Type Machine";
+    padding: $fonte_pequena_2;
+    font-size: $fonte_media_1;
+    background-color: $cor_primaria_v;
+    border: none;
+    border-radius: 5px;
+    color: $cor_fonte_secundaria;
+    width: 200px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.novo_fato img{
+    width: 40px;
 }

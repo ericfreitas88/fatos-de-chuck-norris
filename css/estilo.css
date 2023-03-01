@@ -1,77 +1,105 @@
-/* Define variáveis para as cores usadas na página */
-:root {
-  --bg-color: #1a1a1a;  /* cor de fundo da página */
-  --text-color: #f2f2f2;  /* cor do texto */
-  --link-color: #dbdbdb;  /* cor dos links */
-  --accent-color: #ff5555;  /* cor de destaque */
+@charset "UTF-8";
+@font-face {
+  font-family: "Old Newspaper";
+  src: url("/fontes/Mom«t___.ttf");
+}
+@font-face {
+  font-family: "1942";
+  src: url("/fontes/1942.ttf");
+}
+@font-face {
+  font-family: "Type Machine";
+  src: url("/fontes/Type_Machine.ttf");
+}
+/* Estilos Gerais */
+*, :root {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Aplica o esquema de cores à página */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: #242424;
+  color: #FAFAFA;
 }
 
-a {
-  color: var(--link-color);
+/* Estilos do topo */
+.topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto 80px;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #100F10;
 }
 
-/* Define o estilo para o cabeçalho */
-header {
-  background-color: var(--accent-color);
-  color: var(--text-color);
+.topo q {
+  font-family: "Old Newspaper";
+  font-size: 16px;
   text-align: center;
-  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 28px;
 }
 
-header img {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
+.topo span {
+  font-family: "1942";
+  font-size: 16px;
+  align-self: flex-end;
 }
 
-header q {
-  display: block;
-  font-size: 1.2rem;
-  margin: 10px 0;
+.img-topo {
+  border-radius: 50%;
+  width: 65px;
+  position: absolute;
+  right: -20px;
+  top: -10px;
 }
 
-header span {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-/* Define o estilo para o conteúdo principal */
+/* Estilos do conteudo */
 .container-fatos {
-  text-align: center;
-  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .chuck-fato {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-family: "Type Machine";
+  font-size: 28px;
+  text-align: center;
 }
 
 .novo_fato {
-  background-color: var(--accent-color);
-  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Type Machine";
+  padding: 10px;
+  font-size: 16px;
+  background-color: #FF0043;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
   border-radius: 5px;
+  color: rgba(255, 255, 255, 0.67);
+  width: 200px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
 }
 
-/* Define o estilo para o rodapé */
-footer {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 20px;
+.novo_fato img {
+  width: 40px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
