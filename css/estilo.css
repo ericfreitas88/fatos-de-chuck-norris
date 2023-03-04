@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Old Newspaper";
-  src: url("./fontes/Mom«t___.ttf");
+  src: url("../fontes/Mom«t___.ttf");
 }
 @font-face {
   font-family: "1942";
-  src: url("./fontes/1942.ttf");
+  src: url("../fontes/1942.ttf");
 }
 @font-face {
   font-family: "Type Machine";
-  src: url("./fontes/Type_Machine.ttf");
+  src: url("../fontes/Type_Machine.ttf");
 }
 /* Estilos Gerais */
 *,
