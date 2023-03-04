@@ -132,7 +132,7 @@ body {
 /* Estilos para responsividade */
 @media All and (max-width: 425px) {
   .topo {
-    padding-top: 30px;
+    padding-top: 40px;
   }
   .banner q {
     font-size: 14px;
