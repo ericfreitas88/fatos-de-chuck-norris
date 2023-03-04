@@ -32,6 +32,9 @@
 body {
     background-color: $bg_color_3;
     color: $cor_primaria_b;
+    height: 100vh;
+    display: flex;
+    flex-direction: column
 }
 
 /* Estilos do topo */
@@ -114,9 +117,11 @@ body {
     width: 40px;
 }
 
+/* Estilos do rodapé */
 .copy {
     @include flex-Center();
-    padding: 80px 0 20px;
+    padding:20px 0;
+    margin-top: auto;
     font-size: $fonte_pequena_2;
     font-family: "Type Machine";
 }
@@ -124,6 +129,7 @@ body {
     font-size: $fonte_pequena_3;
 }
 
+/* Estilos para responsividade */
 @media All and (max-width: 425px) {
     .banner q {
         font-size: $fonte_pequena_3;
