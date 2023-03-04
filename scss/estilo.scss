@@ -1,12 +1,15 @@
 @import "cores-base.scss";
+
 @font-face {
     font-family: "Old Newspaper";
     src: url("../fontes/Mom«t___.ttf");
 }
+
 @font-face {
     font-family: "1942";
     src: url("../fontes/1942.ttf");
 }
+
 @font-face {
     font-family: "Type Machine";
     src: url("../fontes/Type_Machine.ttf");
@@ -29,7 +32,9 @@
 body {
     background-color: $bg_color_3;
     color: $cor_primaria_b;
-    height: 100vh;
+    min-height: -webkit-calc(100vh - 60px);
+    min-height: -moz-calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column
 }
@@ -132,9 +137,11 @@ body {
     .topo {
         padding-top: 40px;
     }
+
     .banner q {
         font-size: $fonte_pequena_3;
     }
+
     .chuck-fato {
         font-size: $fonte_media_2;
     }
