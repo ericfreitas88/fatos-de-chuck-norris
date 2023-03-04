@@ -32,9 +32,7 @@
 body {
     background-color: $bg_color_3;
     color: $cor_primaria_b;
-    min-height: -webkit-calc(100vh - 60px);
-    min-height: -moz-calc(100vh - 60px);
-    min-height: calc(100vh - 60px);
+    height: 100vh;
     display: flex;
     flex-direction: column
 }
@@ -134,10 +132,14 @@ body {
 
 /* Estilos para responsividade */
 @media All and (max-width: 425px) {
+    body {
+        min-height: -webkit-calc(100vh - 60px);
+        min-height: -moz-calc(100vh - 60px);
+        min-height: calc(100vh - 60px);
+    }
     .topo {
         padding-top: 40px;
     }
-
     .banner q {
         font-size: $fonte_pequena_3;
     }
