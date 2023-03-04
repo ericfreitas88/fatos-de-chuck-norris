@@ -120,11 +120,12 @@ body {
 /* Estilos do rodapé */
 .copy {
     @include flex-Center();
-    padding:20px 0;
+    padding: 20px 0;
     margin-top: auto;
     font-size: $fonte_pequena_2;
     font-family: "Type Machine";
 }
+
 .copy span {
     font-size: $fonte_pequena_3;
 }
