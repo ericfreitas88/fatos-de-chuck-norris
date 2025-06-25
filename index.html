@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="all">
-    <meta name="author" content="Eric Vilarino de Freitas">
-    <meta name="description" content="Nesta página mostramos alguns fatos engraçados sobre Chuck Norris">
-    <meta name="keywords" content="Chuck Norris, Chuck, Norris, Eric Vilarino de Freitas, Eric, Vilarino, de Freitas">
-    <link rel="stylesheet" href="./css/estilo.css?v=1.4">
-    <link rel="icon" href="./assets/chuck-icon.gif">
-    <title>Chuck Fatos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Eric Vilarino de Freitas">
+  <meta name="description" content="Descubra os fatos mais engraçados e lendários de Chuck Norris! Uma página divertida com piadas aleatórias que mostram o poder do ícone dos memes.">
+  <meta name="keywords" content="Chuck Norris, Fatos de Chuck Norris, Piadas Chuck Norris, Frases engraçadas, Eric Freitas">
+  
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Fatos Engraçados de Chuck Norris">
+  <meta property="og:description" content="Frases lendárias e divertidas de Chuck Norris que vão te fazer rir. Confira e compartilhe!">
+  <meta property="og:image" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/assets/selo-chuck.png">
+  <meta property="og:url" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="./css/estilo.css?v=1.4">
+  <link rel="icon" href="./assets/chuck-icon.gif" type="image/gif">
+  
+  <title>Fatos Engraçados de Chuck Norris | Eric Freitas</title>
 </head>
 
 <body>
-    <header class="topo">
-        <div class="banner">
-            <q>Chuck Norris, é Chuck Norris, porque ele é Chuck Norris</q>
-            <span>Mundo Canibal</span>
-            <img class="img-topo" src="./assets/selo-chuck.png" alt="Selo de qualidade Chuck Norris">
-        </div>
-    </header>
-    <main>
-        <section class="container-fatos">
-            <button class="novo_fato">Próximo</button>
-            <blockquote class="chuck-fato"></blockquote>
-        </section>
-    </main>
-    <footer class="copy">
-        <div><span>&copy;</span> Eric Freitas 2023</div>
-    </footer>
-    <script src="./js/jquery-3.6.3.min.js"></script>
-    <script src="./js/index.js"></script>
+  <header class="topo">
+    <div class="banner">
+      <h1>Fatos Engraçados de Chuck Norris</h1>
+      <q>Chuck Norris, é Chuck Norris, porque ele é Chuck Norris</q>
+      <span>— Mundo Canibal</span>
+      <img class="img-topo" src="./assets/selo-chuck.png" alt="Selo de qualidade Chuck Norris">
+    </div>
+  </header>
+
+  <main>
+    <section class="container-fatos">
+      <h2>Descubra um novo fato lendário</h2>
+      <button class="novo_fato" aria-label="Mostrar novo fato de Chuck Norris">Próximo</button>
+      <blockquote class="chuck-fato" aria-live="polite"></blockquote>
+    </section>
+  </main>
+
+  <footer class="copy">
+    <div><span>&copy;</span> Eric Freitas 2023</div>
+  </footer>
+
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
