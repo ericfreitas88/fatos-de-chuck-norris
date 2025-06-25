@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Old Newspaper";
+  src: url("../fontes/Mom«t___.ttf");
+}
+@font-face {
+  font-family: "1942";
+  src: url("../fontes/1942.ttf");
+}
+@font-face {
+  font-family: "Type Machine";
+  src: url("../fontes/Type_Machine.ttf");
+}
+/* Estilos Gerais */
+*,
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242424;
+  color: #FAFAFA;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos do topo */
+.topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #100F10;
+}
+
+.banner q {
+  font-family: "Old Newspaper";
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 28px;
+}
+
+.banner span {
+  font-family: "1942";
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.img-topo {
+  border-radius: 50%;
+  width: 65px;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+}
+
+/* Estilos do conteudo */
+.container-fatos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.chuck-fato {
+  font-family: "Type Machine";
+  font-size: 28px;
+  text-align: center;
+}
+
+.novo_fato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Type Machine";
+  padding: 12px;
+  font-size: 16px;
+  background-color: #FF0043;
+  border: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.67);
+  width: 200px;
+  height: 64px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.novo_fato img {
+  width: 40px;
+}
+
+/* Estilos do rodapé */
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 12px;
+  font-family: "Type Machine";
+}
+
+.copy span {
+  font-size: 14px;
+}
+
+/* Estilos para responsividade */
+@media All and (max-width: 425px) {
+  body {
+    min-height: calc(100vh - 60px);
+  }
+  .topo {
+    padding-top: 40px;
+  }
+  .banner q {
+    font-size: 14px;
+  }
+  .chuck-fato {
+    font-size: 22px;
+  }
+}/*# sourceMappingURL=estilo.css.map */
