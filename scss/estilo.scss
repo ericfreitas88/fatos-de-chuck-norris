@@ -56,9 +56,14 @@ body {
     background-color: $bg_color_1;
 }
 
+.title {
+    margin-bottom: 20px;
+    font-family: "Old Newspaper";
+    font-size: $fonte_media_1;
+}
+
 .banner q {
     font-family: "Old Newspaper";
-    ;
     font-size: $fonte_media_1;
     text-align: center;
     text-transform: uppercase;
@@ -89,6 +94,12 @@ body {
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.sub-title {
+    font-family: "Type Machine";
+    font-size: $fonte_media_1;
+    margin-bottom: 10px;
 }
 
 .chuck-fato {
