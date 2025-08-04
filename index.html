@@ -8,19 +8,33 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Eric Vilarino de Freitas">
   <meta name="description" content="Descubra os fatos mais engraçados e lendários de Chuck Norris! Uma página divertida com piadas aleatórias que mostram o poder do ícone dos memes.">
-  <meta name="keywords" content="Chuck Norris, Fatos de Chuck Norris, Piadas Chuck Norris, Frases engraçadas, Eric Freitas">
+  <meta name="keywords" content="Chuck Norris, Fatos de Chuck Norris, Piadas Chuck Norris, Frases engraçadas, Eric Freitas, Desenvolvedor Web">
   
   <!-- Open Graph para redes sociais -->
-  <meta property="og:title" content="Fatos Engraçados de Chuck Norris">
+  <meta property="og:title" content="Fatos Engraçados de Chuck Norris | Gerador de Piadas">
   <meta property="og:description" content="Frases lendárias e divertidas de Chuck Norris que vão te fazer rir. Confira e compartilhe!">
   <meta property="og:image" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/assets/selo-chuck.png">
   <meta property="og:url" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/">
   <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fatos Engraçados de Chuck Norris | Gerador de Piadas">
+  <meta name="twitter:description" content="Frases lendárias e divertidas de Chuck Norris que vão te fazer rir. Confira e compartilhe!">
+  <meta name="twitter:image" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/assets/selo-chuck.png">
 
-  <link rel="stylesheet" href="./scss/estilo.css?v=1.4">
+  <!-- Preload de fontes para melhor performance -->
+  <link rel="preload" href="./fontes/Mom«t___.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fontes/1942.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fontes/Type_Machine.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <link rel="stylesheet" href="./scss/estilo.css?v=1.5">
   <link rel="icon" href="./assets/chuck-icon.gif" type="image/gif">
   
-  <title>Fatos Engraçados de Chuck Norris | Eric Freitas</title>
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>Fatos Engraçados de Chuck Norris | Gerador de Piadas | Eric Freitas</title>
 </head>
 
 <body>
@@ -42,7 +56,33 @@
   </main>
 
   <footer class="copy">
-    <div><span>&copy;</span> Eric Freitas 2023</div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Sobre o Projeto</h3>
+        <p>Este projeto foi desenvolvido para trazer diversão através dos famosos fatos sobre Chuck Norris, utilizando a API pública chucknorris.io</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Desenvolvedor</h3>
+        <p>Eric Vilarino de Freitas</p>
+        <p>Desenvolvedor Web Full Stack</p>
+        <div class="social-links">
+          <a href="https://github.com/ericfreitas88" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/eric-freitas" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:contato@ericfreitas.dev" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Links</h3>
+        <div class="nav-links">
+          <a href="./index.html">Início</a>
+          <a href="./contato.html">Fale Comigo</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright"><span>&copy;</span> Eric Freitas 2024 - Todos os direitos reservados</div>
   </footer>
 
   <script src="./js/jquery-3.6.3.min.js"></script>

@@ -29,134 +29,580 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $bg_color_3;
     color: $cor_primaria_b;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Estilos do topo */
 .topo {
     @include flex-Center();
-    padding: 80px 20px;
+    padding: 80px 20px 60px;
+    background: linear-gradient(to bottom, darken($bg_color_3, 5%), $bg_color_3);
 }
 
 .banner {
     @include flex-Center();
     flex-direction: column;
     position: relative;
-    gap: 10px;
-    max-width: 600px;
+    gap: 15px;
+    max-width: 650px;
     width: 100%;
-    padding: 25px 35px;
-    border-radius: 10px;
-    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px $cor_sombra;
     background-color: $bg_color_1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px $cor_sombra;
+    }
 }
 
 .title {
     margin-bottom: 20px;
     font-family: "Old Newspaper";
-    font-size: $fonte_media_1;
+    font-size: $fonte_media_3;
+    color: $cor_primaria_v;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .banner q {
     font-family: "Old Newspaper";
-    font-size: $fonte_media_1;
+    font-size: $fonte_media_2;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: $fonte_pequena_1;
-    line-height: $fonte_media_3;
+    line-height: 1.4;
+    position: relative;
+    padding: 0 15px;
+    
+    &::before, &::after {
+        font-size: $fonte_grande_1;
+        color: $cor_primaria_v;
+        opacity: 0.7;
+        position: absolute;
+    }
+    
+    &::before {
+        content: open-quote;
+        top: -20px;
+        left: -10px;
+    }
+    
+    &::after {
+        content: close-quote;
+        bottom: -30px;
+        right: -10px;
+    }
 }
 
 .banner span {
     font-family: "1942";
     font-size: $fonte_media_1;
     align-self: flex-end;
+    margin-top: 10px;
+    font-style: italic;
 }
 
 .img-topo {
     border-radius: 50%;
-    width: 65px;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    right: -20px;
-    top: -10px;
+    right: -25px;
+    top: -25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: rotate(10deg) scale(1.1);
+    }
 }
 
 /* Estilos do conteudo */
 .container-fatos {
     @include flex-Center();
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     max-width: 800px;
     width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
+    padding: 20px;
+    margin: 0 auto 40px;
+    background-color: rgba($bg_color_2, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .sub-title {
     font-family: "Type Machine";
-    font-size: $fonte_media_1;
+    font-size: $fonte_media_2;
     margin-bottom: 10px;
+    color: $cor_fonte_principal;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: $cor_primaria_v;
+        border-radius: 3px;
+    }
 }
 
 .chuck-fato {
     font-family: "Type Machine";
     font-size: $fonte_media_3;
     text-align: center;
+    padding: 20px;
+    background-color: $bg_color_1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: transform 0.3s ease;
+    
+    &:not(:empty) {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .novo_fato {
     @include flex-Center();
     font-family: "Type Machine";
-    padding: $fonte_pequena_2;
+    padding: $fonte_pequena_2 $fonte_media_1;
     font-size: $fonte_media_1;
     background-color: $cor_primaria_v;
     border: none;
-    border-radius: 5px;
-    color: $cor_fonte_secundaria;
+    border-radius: 8px;
+    color: $cor_fonte_principal;
     width: 200px;
     height: 64px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+        background-color: $cor_destaque;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba($cor_primaria_v, 0.4);
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba($cor_primaria_v, 0.4);
+    }
+    
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($cor_primaria_v, 0.5);
+    }
 }
 
 .novo_fato img {
     width: 40px;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* Estilos do rodapé */
 .copy {
     @include flex-Center();
-    padding: 20px 0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 20px;
     margin-top: auto;
-    font-size: $fonte_pequena_2;
+    font-size: $fonte_pequena_3;
     font-family: "Type Machine";
+    background-color: $bg_color_1;
+    color: $cor_fonte_secundaria;
 }
 
 .copy span {
     font-size: $fonte_pequena_3;
 }
 
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: $cor_primaria_v;
+    margin-bottom: 10px;
+    font-size: $fonte_media_1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: $cor_fonte_secundaria;
+    font-size: $fonte_media_1;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $cor_primaria_v;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    color: $cor_fonte_secundaria;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $cor_primaria_v;
+        text-decoration: underline;
+    }
+}
+
+/* Estilos para a página de contato */
+.container-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 auto 40px;
+    background-color: rgba($bg_color_2, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.info-contato, .formulario-contato {
+    flex: 1 1 400px;
+}
+
+.info-contato p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: $cor_fonte_secundaria;
+    font-family: "Type Machine";
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-family: "Type Machine";
+}
+
+.contato-item i {
+    color: $cor_primaria_v;
+    font-size: $fonte_media_1;
+    width: 24px;
+    text-align: center;
+}
+
+.contato-item a {
+    color: $cor_fonte_secundaria;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $cor_primaria_v;
+        text-decoration: underline;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Type Machine";
+    color: $cor_fonte_secundaria;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid $bg_color_1;
+    border-radius: 8px;
+    background-color: rgba($bg_color_1, 0.7);
+    color: $cor_fonte_principal;
+    font-family: "Type Machine";
+    font-size: $fonte_pequena_3;
+    transition: all 0.3s ease;
+    
+    &:focus {
+        outline: none;
+        border-color: $cor_primaria_v;
+        box-shadow: 0 0 0 2px rgba($cor_primaria_v, 0.3);
+    }
+    
+    &::placeholder {
+        color: rgba($cor_fonte_terceira, 0.7);
+    }
+}
+
+.btn-enviar {
+    @include flex-Center();
+    font-family: "Type Machine";
+    padding: $fonte_pequena_2 $fonte_media_1;
+    font-size: $fonte_media_1;
+    background-color: $cor_primaria_v;
+    border: none;
+    border-radius: 8px;
+    color: $cor_fonte_principal;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: $cor_destaque;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba($cor_primaria_v, 0.4);
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba($cor_primaria_v, 0.4);
+    }
+    
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($cor_primaria_v, 0.5);
+    }
+    
+    &:disabled {
+        background-color: $cor_primaria_C;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+.container-projetos {
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 auto 60px;
+    background-color: rgba($bg_color_2, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.container-projetos p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "Type Machine";
+    color: $cor_fonte_secundaria;
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.projeto-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 25px;
+    background-color: $bg_color_1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.projeto-card h3 {
+    color: $cor_primaria_v;
+    margin-bottom: 15px;
+    font-family: "Type Machine";
+    font-size: $fonte_media_1;
+}
+
+.projeto-card p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $cor_primaria_v;
+    color: $cor_fonte_principal;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Type Machine";
+    font-size: $fonte_pequena_3;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: $cor_destaque;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba($cor_primaria_v, 0.4);
+    }
+}
+
 /* Estilos para responsividade */
+@media All and (max-width: 768px) {
+    .title {
+        font-size: $fonte_media_2;
+    }
+    
+    .banner {
+        padding: 25px 30px;
+    }
+    
+    .banner q {
+        font-size: $fonte_media_1;
+    }
+    
+    .container-fatos,
+    .container-contato,
+    .container-projetos {
+        padding: 20px 15px;
+    }
+    
+    .sub-title {
+        font-size: $fonte_media_1;
+    }
+    
+    .chuck-fato {
+        font-size: $fonte_media_2;
+        padding: 15px;
+    }
+    
+    .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+    
+    .info-contato, .formulario-contato {
+        flex: 1 1 100%;
+    }
+}
+
 @media All and (max-width: 425px) {
     body {
-        min-height: -webkit-calc(100vh - 60px);
-        min-height: -moz-calc(100vh - 60px);
-        min-height: calc(100vh - 60px);
+        min-height: 100vh;
     }
+    
     .topo {
-        padding-top: 40px;
+        padding: 40px 15px 30px;
     }
+    
+    .banner {
+        padding: 20px;
+    }
+    
     .banner q {
         font-size: $fonte_pequena_3;
+        
+        &::before, &::after {
+            font-size: $fonte_media_3;
+        }
+    }
+    
+    .img-topo {
+        width: 60px;
+        height: 60px;
+        right: -15px;
+        top: -15px;
     }
 
     .chuck-fato {
-        font-size: $fonte_media_2;
+        font-size: $fonte_media_1;
+    }
+    
+    .novo_fato {
+        width: 180px;
+        height: 55px;
+        font-size: $fonte_pequena_3;
+    }
+    
+    .container-contato,
+    .container-projetos {
+        padding: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+    
+    .btn-enviar {
+        height: 45px;
+        font-size: $fonte_pequena_3;
+    }
+    
+    .projeto-card {
+        padding: 15px;
+    }
+    
+    .btn-projeto {
+        padding: 8px 15px;
+        font-size: $fonte_pequena_2;
+    }
+    
+    .copyright {
+        font-size: $fonte_pequena_2;
     }
 }

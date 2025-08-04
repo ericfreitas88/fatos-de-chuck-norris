@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Eric Vilarino de Freitas">
+  <meta name="description" content="Entre em contato com Eric Freitas, desenvolvedor do projeto Fatos de Chuck Norris. Estou disponível para novos projetos e colaborações.">
+  <meta name="keywords" content="Contato, Eric Freitas, Desenvolvedor Web, Fatos de Chuck Norris, Freelancer">
+  
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Fale Comigo | Eric Freitas - Desenvolvedor">
+  <meta property="og:description" content="Entre em contato com Eric Freitas, desenvolvedor do projeto Fatos de Chuck Norris. Estou disponível para novos projetos e colaborações.">
+  <meta property="og:image" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/assets/selo-chuck.png">
+  <meta property="og:url" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/contato.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fale Comigo | Eric Freitas - Desenvolvedor">
+  <meta name="twitter:description" content="Entre em contato com Eric Freitas, desenvolvedor do projeto Fatos de Chuck Norris. Estou disponível para novos projetos e colaborações.">
+  <meta name="twitter:image" content="https://ericfreitas88.github.io/fatos-de-chuck-norris/assets/selo-chuck.png">
+
+  <!-- Preload de fontes para melhor performance -->
+  <link rel="preload" href="./fontes/Mom«t___.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fontes/1942.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fontes/Type_Machine.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <link rel="stylesheet" href="./scss/estilo.css?v=1.5">
+  <link rel="icon" href="./assets/chuck-icon.gif" type="image/gif">
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>Fale Comigo | Eric Freitas - Desenvolvedor</title>
+</head>
+
+<body>
+  <header class="topo">
+    <div class="banner">
+      <h1 class="title">Fale Comigo</h1>
+      <q>Estou disponível para novos projetos e colaborações</q>
+      <span>— Eric Freitas</span>
+      <img class="img-topo" src="./assets/selo-chuck.png" alt="Selo de qualidade Chuck Norris">
+    </div>
+  </header>
+
+  <main>
+    <section class="container-contato">
+      <div class="info-contato">
+        <h2 class="sub-title">Informações de Contato</h2>
+        <p>Olá! Sou Eric Freitas, desenvolvedor web full stack apaixonado por criar experiências digitais incríveis. Se você gostou do projeto Fatos de Chuck Norris e está interessado em trabalhar comigo, entre em contato através dos canais abaixo:</p>
+        
+        <div class="contato-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:contato@ericfreitas.dev">contato@ericfreitas.dev</a>
+        </div>
+        
+        <div class="contato-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/eric-freitas" target="_blank">linkedin.com/in/eric-freitas</a>
+        </div>
+        
+        <div class="contato-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/ericfreitas88" target="_blank">github.com/ericfreitas88</a>
+        </div>
+      </div>
+      
+      <div class="formulario-contato">
+        <h2 class="sub-title">Envie uma Mensagem</h2>
+        <form id="form-contato" action="#" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" required placeholder="Assunto da mensagem">
+          </div>
+          
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Digite sua mensagem aqui..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+    
+    <section class="container-projetos">
+      <h2 class="sub-title">Outros Projetos</h2>
+      <p>Confira outros projetos desenvolvidos por mim:</p>
+      
+      <div class="lista-projetos">
+        <div class="projeto-card">
+          <h3>Fatos de Chuck Norris</h3>
+          <p>Gerador de fatos engraçados sobre Chuck Norris utilizando a API pública chucknorris.io</p>
+          <a href="./index.html" class="btn-projeto">Ver Projeto</a>
+        </div>
+        
+        <div class="projeto-card">
+          <h3>Portfolio Completo</h3>
+          <p>Visite meu portfolio completo para conhecer mais sobre meu trabalho e habilidades</p>
+          <a href="https://github.com/ericfreitas88" target="_blank" class="btn-projeto">Ver Portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="copy">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Sobre o Projeto</h3>
+        <p>Este projeto foi desenvolvido para trazer diversão através dos famosos fatos sobre Chuck Norris, utilizando a API pública chucknorris.io</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Desenvolvedor</h3>
+        <p>Eric Vilarino de Freitas</p>
+        <p>Desenvolvedor Web Full Stack</p>
+        <div class="social-links">
+          <a href="https://github.com/ericfreitas88" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/eric-freitas" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:contato@ericfreitas.dev" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Links</h3>
+        <div class="nav-links">
+          <a href="./index.html">Início</a>
+          <a href="./contato.html">Fale Comigo</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright"><span>&copy;</span> Eric Freitas 2024 - Todos os direitos reservados</div>
+  </footer>
+
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script src="./js/contato.js"></script>
+</body>
+
+</html>

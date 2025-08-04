@@ -2,13 +2,16 @@ $cor_primaria_v: #FF0043;
 $cor_primaria_b: #FAFAFA;
 $cor_primaria_C: #535353;
 
-$bg_color_1: #100F10;
+$bg_color_1: #0F0E0F;
 $bg_color_2: #1B1B1B;
 $bg_color_3: #242424;
 
 $cor_fonte_principal: rgba(#fff,0.96);
-$cor_fonte_secundaria: rgba(#fff,0.67);
-$cor_fonte_terceira: rgba(#fff,0.45);
+$cor_fonte_secundaria: rgba(#fff,0.87); /* Melhorado contraste */
+$cor_fonte_terceira: rgba(#fff,0.65); /* Melhorado contraste */
+
+$cor_destaque: #FF3366; /* Nova cor de destaque para elementos interativos */
+$cor_sombra: rgba(0, 0, 0, 0.5); /* Cor para sombras */
 
 $fonte_pequena_1: 10px;
 $fonte_pequena_2: 12px;
