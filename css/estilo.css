@@ -658,3 +658,103 @@ body {
         font-size: var(--fonte-pequena-2);
     }
 }
+
+/* Estilos para reCAPTCHA e mensagens */
+.recaptcha-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.recaptcha-note {
+    display: block;
+    margin-top: 10px;
+    color: var(--cor-fonte-secundaria);
+    font-size: var(--fonte-pequena-2);
+    font-style: italic;
+}
+
+.g-recaptcha {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.success-message {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2ed573, #1e90ff);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(46, 213, 115, 0.3);
+    animation: slideDown 0.5s ease;
+}
+
+.success-message i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.success-message h3 {
+    margin: 15px 0 10px;
+    font-family: "Type_Machine", monospace;
+    font-size: var(--fonte-media-1);
+}
+
+.success-message p {
+    margin: 0;
+    font-size: var(--fonte-pequena-3);
+    opacity: 0.9;
+}
+
+.error-message {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para reCAPTCHA */
+@media (max-width: 768px) {
+    .g-recaptcha {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+    
+    .success-message {
+        padding: 20px;
+    }
+    
+    .success-message i {
+        font-size: 2.5rem;
+    }
+    
+    .success-message h3 {
+        font-size: var(--fonte-pequena-3);
+    }
+}
+
+@media (max-width: 425px) {
+    .g-recaptcha {
+        transform: scale(0.8);
+    }
+    
+    .recaptcha-note {
+        font-size: var(--fonte-pequena-1);
+    }
+    
+    .success-message {
+        padding: 15px;
+    }
+    
+    .success-message i {
+        font-size: 2rem;
+    }
+}
